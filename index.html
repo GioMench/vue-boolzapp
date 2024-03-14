@@ -88,10 +88,10 @@
                     <section class="chat-on">
                         <div class="info-chaton">
                             <!--avatar-img-->
-                            <img class="avatar" src="./assets/css/img/avatar_1.jpg" alt="">
+                            <img class="avatar" :src="'./assets/css/img/'+ contacts[activeContact].image" alt=""/>
                             <!--info-contacts-->
                             <div class="info-contact-top">
-                                <h4>Michele</h4>
+                                <h4>{{contacts[activeContact].name}}</h4>
                                 <div class="text-light">Ultimo accesso oggi alle 16:26</div>
                             </div>
                         </div>
@@ -106,11 +106,11 @@
                     </section>
                     <!--/section-chat-on-->
 
-                    <section class="chat" v-for="contact in contacts">
+                    <section class="chat">
 
                         <div class="sent text-message">
                             <!--text-message-->                           
-                               {{contacts[activeContact].myMessage}} 
+                               
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
@@ -139,7 +139,7 @@
 
                         <div class="recived text-message" >
                             <!--text-message-->
-                               {{contacts[activeContact].contactMessage}}
+                               
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
