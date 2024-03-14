@@ -62,9 +62,9 @@
 
                     <section class="contacts">
 
-                        <div class="card">
+                        <div class="card" v-for="contact in contacts">
                             <!--avatar-img-->
-                            <img class="avatar" src="./assets/css/img/avatar_1.jpg" alt="">
+                            <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt=""/>
                             <!--info-contacts-->
                             <div class="info-contact">
                                 <h4>Michele</h4>
