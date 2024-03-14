@@ -62,7 +62,7 @@
 
                     <section class="contacts">
 
-                        <div class="card" v-for="contact in contacts">
+                        <div class="card" v-for="contact in contacts" @click="activeTheContact()">
                             <!--avatar-img-->
                             <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt=""/>
                             <!--info-contacts-->
@@ -108,15 +108,9 @@
 
                     <section class="chat">
 
-                        <div class="sent">
-                            <!--text-message-->
-                            <div class="text-message">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse neque distinctio
-                                placeat
-                                quas tenetur dignissimos officiis ipsum doloremque error magnam, mollitia est quia velit
-                                dolores
-                                ut aut optio ratione.
-                            </div>
+                        <div class="sent text-message">
+                            <!--text-message-->                           
+                               {{contacts[activeContact].myMessage}} 
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
@@ -141,18 +135,11 @@
                                 </div>
                                 <!--time-->
                             </div>
-
                         </div>
 
-                        <div class="recived">
+                        <div class="recived text-message" >
                             <!--text-message-->
-                            <div class="text-message">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse neque distinctio
-                                placeat
-                                quas tenetur dignissimos officiis ipsum doloremque error magnam, mollitia est quia velit
-                                dolores
-                                ut aut optio ratione.
-                            </div>
+                               {{contacts[activeContact].contactMessage}}
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
