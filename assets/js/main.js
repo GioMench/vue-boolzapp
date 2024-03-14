@@ -54,16 +54,16 @@ createApp({
                     myMessage:' My message with Luca',
                     contactMessage: 'Luca answer'
                 }
-            ]
+            ],
 
+           
         }
+ 
     },
 
     methods: {
-        activeTheContact(){
-            document.getElementsByClassName('card').addEventListener('click',function(){
-                this.contact = this.activeContact
-            })
+        activeTheContact(index){
+            this.activeContact = index 
         }
 
     }

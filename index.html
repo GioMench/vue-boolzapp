@@ -62,7 +62,7 @@
 
                     <section class="contacts">
 
-                        <div class="card" v-for="contact in contacts" @click="activeTheContact()">
+                        <div class="card" v-for="(contact, index) in contacts" @click="activeTheContact(index)">
                             <!--avatar-img-->
                             <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt=""/>
                             <!--info-contacts-->
@@ -106,7 +106,7 @@
                     </section>
                     <!--/section-chat-on-->
 
-                    <section class="chat">
+                    <section class="chat" v-for="contact in contacts">
 
                         <div class="sent text-message">
                             <!--text-message-->                           
