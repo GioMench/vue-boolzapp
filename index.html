@@ -64,7 +64,7 @@
 
                         <div class="card" v-for="(contact, index) in contacts" @click="activeTheContact(index)">
                             <!--avatar-img-->
-                            <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt=""/>
+                            <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt="" />
                             <!--info-contacts-->
                             <div class="info-contact">
                                 <h4>{{contact.name}}</h4>
@@ -88,7 +88,7 @@
                     <section class="chat-on">
                         <div class="info-chaton">
                             <!--avatar-img-->
-                            <img class="avatar" :src="'./assets/css/img/'+ contacts[activeContact].image" alt=""/>
+                            <img class="avatar" :src="'./assets/css/img/'+ contacts[activeContact].image" alt="" />
                             <!--info-contacts-->
                             <div class="info-contact-top">
                                 <h4>{{contacts[activeContact].name}}</h4>
@@ -106,11 +106,13 @@
                     </section>
                     <!--/section-chat-on-->
 
-                    <section class="chat">
+                    <section class="chat" v-for="contact in contacts">
 
-                        <div class="sent text-message">
-                            <!--text-message-->                           
-                               
+                        <div class="sent text-message" v-for="message in contact.messages">
+                            <!--text-message-->
+                            <div v-if="message.status === 'sent'">
+                                {{message.message}}
+                            </div>
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
@@ -137,9 +139,11 @@
                             </div>
                         </div>
 
-                        <div class="recived text-message" >
+                        <div class="recived text-message" v-for="message in contact.messages">
                             <!--text-message-->
-                               
+                            <div v-if="message.status === 'received'">
+                                {{message.message}}
+                            </div>
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
