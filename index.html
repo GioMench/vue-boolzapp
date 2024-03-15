@@ -54,11 +54,32 @@
                         <div class="container-searchbar">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <!--text-bar-->
-                            <input class="searchbar" id="searchbar" type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input class="searchbar" id="searchbar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact" />
                         </div>
 
                     </section>
                     <!--/section-search-->
+
+
+                    <template class="contacts" v-for="contact in filterContactList" :key="contact">
+
+                        <div class="card">
+                            <!--avatar-img-->
+                            <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt="" />
+                            <!--info-contacts-->
+                            <div class="info-contact">
+                                <h4>{{filterContactList.name}}</h4>
+                                <div class="text-light">{{contact.lastMessage}}</div>
+                            </div>
+                            <!--time-of-last-message-->
+                            <div class="time">
+                                16:15
+                            </div>
+                        </div>
+                        <!--/card-->
+
+                    </template>
+                    
 
                     <section class="contacts">
 

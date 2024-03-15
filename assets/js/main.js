@@ -113,10 +113,10 @@ createApp({
                             msg: 'Ale L. answer',
                             status: 'received'
 
-                        }                       
+                        }
 
                     ]
-                     
+
                 }, {
                     image: 'avatar_6.jpg',
                     name: 'Alessandra',
@@ -170,7 +170,7 @@ createApp({
                             date: '10/01/2020 15:30:55',
                             msg: 'My message with Luca',
                             status: 'sent'
-                        },{
+                        }, {
                             date: '10/01/2020 16:15:22',
                             msg: 'Luca answer',
                             status: 'received'
@@ -181,36 +181,50 @@ createApp({
                             msg: 'My message with Luca',
                             status: 'sent'
                         }
-                        
+
                     ]
                 }
             ],
 
-            textMessage:''
+            textMessage: '',
+            searchContact: '',
+            filterContactList:''
+
         }
 
     },
 
     methods: {
+
+       
         activeTheContact(index) {
-            this.activeContact = index    
+            this.activeContact = index
         },
 
-        generateNewMessage(activeContact){
+        generateNewMessage(activeContact) {
             console.log(this.contacts[activeContact]);
             this.contacts[activeContact].messages.push({
                 date: '10/01/2020 15:30:55',
                 msg: this.textMessage,
                 status: 'sent'
             },
-            {
-                date: '10/01/2020 15:30:55',
-                msg: 'Ok!',
-                status: 'received'
-            },),
+                {
+                    date: '10/01/2020 15:30:55',
+                    msg: 'Ok!',
+                    status: 'received'
+                }),
 
-            this.textMessage=''
+                this.textMessage = ''
         }
+
+
+    },
+
+    computed :{
+        filteredContacts(){
+            return filterContactList =  this.contacts.filter(contact => contact.toLowerCase().includes(this.searchContact.toLowerCase()))
+            
+        },
 
     }
 }).mount('#app')
