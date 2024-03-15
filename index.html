@@ -105,73 +105,74 @@
 
                     </section>
                     <!--/section-chat-on-->
-<div class="the_chat">
-                    <section class="chat" v-for="message in contacts[activeContact].messages">
-                        <!--text-message-->
-                        <div class="sent text-message" v-if="message.status === 'sent'">
-                            
+                    <div class="the_chat">
+                        <section class="chat" v-for="message in contacts[activeContact].messages">
+                            <!--text-message-->
+                            <div class="sent text-message" v-if="message.status === 'sent'">
+
                                 {{message.msg}}
-                           
-                            <!--info-message-->
-                            <div class="info-message">
-                                <!--icon-hover-->
-                                <div class="hover option">
-                                    <ul>
-                                        <li class="hover-dropdown">
-                                            <a href="#">
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <!--under-menu-->
-                                            <ul class="menu-dropdown">
-                                                <li class="icon-a"><a href="hover">Info messaggio</a></li>
-                                                <li class="icon-a"><a href="hover">Cancella messaggio</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+
+                                <!--info-message-->
+                                <div class="info-message">
+                                    <!--icon-hover-->
+                                    <div class="hover option">
+                                        <ul>
+                                            <li class="hover-dropdown">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </a>
+                                                <!--under-menu-->
+                                                <ul class="menu-dropdown">
+                                                    <li class="icon-a"><a href="hover">Info messaggio</a></li>
+                                                    <li class="icon-a"><a href="hover">Cancella messaggio</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!--/icon-hover-->
+
+                                    <div class="message-time text-light">
+                                        16:13
+                                    </div>
+                                    <!--time-->
                                 </div>
 
-                                <!--/icon-hover-->
+                            </div>
+                            <!--text-message-->
+                            <div class="recived text-message" v-if="message.status === 'received'">
 
-                                <div class="message-time text-light">
-                                    16:13
+                                {{message.msg}}
+
+                                <!--info-message-->
+                                <div class="info-message">
+                                    <!--icon-hover-->
+                                    <div class="hover option">
+                                        <ul>
+                                            <li class="hover-dropdown">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </a>
+                                                <!--under-menu-->
+                                                <ul class="menu-dropdown">
+                                                    <li class="icon-a"><a href="hover">Info messaggio</a></li>
+                                                    <li class="icon-a"><a href="hover">Cancella messaggio</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/icon-hover-->
+
+                                    <div class="message-time text-light">
+                                        16:15
+                                    </div>
+                                    <!--time-->
                                 </div>
-                                <!--time-->
                             </div>
 
-                        </div>
-                        <!--text-message-->
-                        <div class="recived text-message" v-if="message.status === 'received'">
-                            
-                                {{message.msg}}
-                        
-                            <!--info-message-->
-                            <div class="info-message">
-                                <!--icon-hover-->
-                                <div class="hover option">
-                                    <ul>
-                                        <li class="hover-dropdown">
-                                            <a href="#">
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <!--under-menu-->
-                                            <ul class="menu-dropdown">
-                                                <li class="icon-a"><a href="hover">Info messaggio</a></li>
-                                                <li class="icon-a"><a href="hover">Cancella messaggio</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/icon-hover-->
-
-                                <div class="message-time text-light">
-                                    16:15
-                                </div>
-                                <!--time-->
-                            </div>
-                        </div>
-
-                    </section>
-                    <!--/section-chat--></div>
+                        </section>
+                        <!--/section-chat-->
+                    </div>
 
                     <section class="typing">
                         <!--emoji-->
