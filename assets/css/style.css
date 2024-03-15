@@ -28,7 +28,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-#app {
+#myapp {
     width: 80%;
     height: 95vh;
     max-width: 1176px;
@@ -211,7 +211,7 @@ a {
 
 .sent,
 .recived {
-    width: 55%;
+    max-width: 55%;
     padding: 5px;
     border-radius: 15px;
     display: flex;
@@ -249,20 +249,19 @@ ul {
 }
 
 .hover .menu-dropdown {
-    display: none
+    display: none;
 }
 
 .hover .hover-dropdown:hover .menu-dropdown {
     display: block;
     position: absolute;
     right: 0;
-    z-index: 1;
     padding: 0;
     
 }
 
 .menu-dropdown{
-    box-shadow: 0.5px 0.5px 10px 0.5px var(--bz-icon-bottom);
+    box-shadow: 0.5px 0.5px 10px 0.5px var(--bz-icon-bottom); 
 }
 
 /*REGION CHAT*/

@@ -12,7 +12,7 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            msg: 'My message with Michele',
+                            msg: 'My message with Michele My message with MicheleMy message with MicheleMy message with MichelevvMy message with Michele',
                             status: 'sent'
                         },
                         {
@@ -113,10 +113,10 @@ createApp({
                             msg: 'Ale L. answer',
                             status: 'received'
 
-                        }
+                        }                       
+
                     ]
-                    
-                    
+                     
                 }, {
                     image: 'avatar_6.jpg',
                     name: 'Alessandra',
@@ -185,7 +185,7 @@ createApp({
                     ]
                 }
             ],
-
+            
 
         }
 
@@ -193,10 +193,12 @@ createApp({
 
     methods: {
         activeTheContact(index) {
-            this.activeContact = index
-            
-        
+            this.activeContact = index    
         },
+
+        generateNewMessage(index){
+            console.log('test');
+        }
 
         
 
