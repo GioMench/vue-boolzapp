@@ -12,17 +12,17 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Michele',
+                            msg: 'My message with Michele',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'My message with Michele',
+                            msg: 'My message with Michele',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Michele answer',
+                            msg: 'Michele answer',
                             status: 'received'
 
                         }
@@ -34,19 +34,19 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Fabio',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            message: 'My message with Fabio',
+                            msg: 'My message with Fabio',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Fabio answer',
+                            msg: 'Fabio answer',
                             status: 'received'
 
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            msg: 'My message with Fabio',
+                            status: 'sent'
                         }
                     ]
                 }, {
@@ -56,17 +56,17 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Samuele',
+                            msg: 'My message with Samuele',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'My message with Samuele',
+                            msg: 'My message with Samuele',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Samuele answer',
+                            msg: 'Samuele answer',
                             status: 'received'
 
                         }
@@ -78,17 +78,17 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Ale B.',
+                            msg: 'My message with Ale B.',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'My message with Ale B.',
+                            msg: 'My message with Ale B.',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Ale B. answer',
+                            msg: 'Ale B. answer',
                             status: 'received'
 
                         }
@@ -100,17 +100,17 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Ale L.',
+                            msg: 'My message with Ale L.',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'My message with Ale L.',
+                            msg: 'My message with Ale L.',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Ale L. answer',
+                            msg: 'Ale L. answer',
                             status: 'received'
 
                         }
@@ -124,17 +124,17 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Ale',
+                            msg: 'My message with Ale',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'My message with Ale',
+                            msg: 'My message with Ale',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Ale answer',
+                            msg: 'Ale answer',
                             status: 'received'
 
                         }
@@ -146,19 +146,19 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Marco',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            message: 'My message with Marco',
+                            msg: 'My message with Marco',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Marco answer',
+                            msg: 'Marco answer',
                             status: 'received'
 
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            msg: 'My message with Marco',
+                            status: 'sent'
                         }
                     ]
                 }, {
@@ -168,20 +168,20 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'My message with Luca',
+                            msg: 'My message with Luca',
                             status: 'sent'
+                        },{
+                            date: '10/01/2020 16:15:22',
+                            msg: 'Luca answer',
+                            status: 'received'
+
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'My message with Luca',
+                            msg: 'My message with Luca',
                             status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 16:15:22',
-                            message: 'Luca answer',
-                            status: 'received'
-
                         }
+                        
                     ]
                 }
             ],
@@ -194,6 +194,8 @@ createApp({
     methods: {
         activeTheContact(index) {
             this.activeContact = index
+            
+        
         },
 
         

@@ -108,10 +108,10 @@
 
                     <section class="chat">
                         <!--text-message-->
-                        <div class="sent text-message">
-
-
-
+                        <div class="sent text-message" v-for="message in contacts[activeContact].messages">
+                            <div v-if="message.status === 'sent'">
+                                {{message.msg}}
+                            </div>
 
                             <!--info-message-->
                             <div class="info-message">
@@ -141,8 +141,11 @@
 
                         </div>
                         <!--text-message-->
-                        <div class="recived text-message">
-
+                        <div class="recived text-message" v-for="message in contacts[activeContact].messages">
+                        
+                            <div v-if="message.status === 'received'">
+                                {{message.msg}}
+                            </div>
 
                             <!--info-message-->
                             <div class="info-message">
