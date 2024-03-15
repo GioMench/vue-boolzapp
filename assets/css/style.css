@@ -187,10 +187,12 @@ a {
 }
 
 /*REGION CHAT-ON*/
-
-.chat {
+.the_chat{
+    height: calc(95vh - 30vh);
     background-image: url(./img/mine.jpg);
-    -height: calc(95vh - 30vh);
+    object-fit: cover;
+}
+.chat {
     display: flex;
     flex-direction: column;
     gap:20px;
