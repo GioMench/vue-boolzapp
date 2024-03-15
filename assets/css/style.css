@@ -191,6 +191,7 @@ a {
     height: calc(95vh - 30vh);
     background-image: url(./img/mine.jpg);
     object-fit: cover;
+    overflow-y: auto;
 }
 .chat {
     display: flex;

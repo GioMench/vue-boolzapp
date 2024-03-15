@@ -54,7 +54,7 @@
                         <div class="container-searchbar">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <!--text-bar-->
-                            <input class="searchbar" type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input class="searchbar" id="searchbar" type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
 
                     </section>
@@ -178,10 +178,9 @@
                         <!--emoji-->
                         <i class="fa-regular fa-face-smile"></i>
                         <!--text-bar-->
-                        <input type="text" id="write" name="write-message" placeholder="Scrivi un messaggio" @keyup.enter="generateNewMessage(activeContact)">
+                        <input type="text" id="write" name="write-message" placeholder="Scrivi un messaggio" @keyup.enter="generateNewMessage(activeContact)" v-model="textMessage">
                         <!--recording-->
                         <i class="fa-solid fa-microphone"></i>
-
                     </section>
                     <!--/section-tiping-->
 

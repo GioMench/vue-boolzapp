@@ -185,8 +185,8 @@ createApp({
                     ]
                 }
             ],
-            
 
+            textMessage:''
         }
 
     },
@@ -198,9 +198,19 @@ createApp({
 
         generateNewMessage(activeContact){
             console.log(this.contacts[activeContact]);
-        }
+            this.contacts[activeContact].messages.push({
+                date: '10/01/2020 15:30:55',
+                msg: this.textMessage,
+                status: 'sent'
+            },
+            {
+                date: '10/01/2020 15:30:55',
+                msg: 'Ok!',
+                status: 'received'
+            },),
 
-        
+            this.textMessage=''
+        }
 
     }
 }).mount('#app')
