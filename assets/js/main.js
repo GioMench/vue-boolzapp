@@ -196,8 +196,8 @@ createApp({
             this.activeContact = index    
         },
 
-        generateNewMessage(index){
-            console.log('test');
+        generateNewMessage(activeContact){
+            console.log(this.contacts[activeContact]);
         }
 
         
