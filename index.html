@@ -106,13 +106,12 @@
                     </section>
                     <!--/section-chat-on-->
 
-                    <section class="chat">
+                    <section class="chat" v-for="message in contacts[activeContact].messages">
                         <!--text-message-->
-                        <div class="sent text-message" v-for="message in contacts[activeContact].messages">
-                            <div v-if="message.status === 'sent'">
+                        <div class="sent text-message" v-if="message.status === 'sent'">
+                            
                                 {{message.msg}}
-                            </div>
-
+                           
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
@@ -141,12 +140,10 @@
 
                         </div>
                         <!--text-message-->
-                        <div class="recived text-message" v-for="message in contacts[activeContact].messages">
-                        
-                            <div v-if="message.status === 'received'">
+                        <div class="recived text-message" v-if="message.status === 'received'">
+                            
                                 {{message.msg}}
-                            </div>
-
+                        
                             <!--info-message-->
                             <div class="info-message">
                                 <!--icon-hover-->
