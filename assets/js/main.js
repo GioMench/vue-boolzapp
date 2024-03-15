@@ -194,7 +194,9 @@ createApp({
     methods: {
         activeTheContact(index) {
             this.activeContact = index
-        }
+        },
+
+        
 
     }
 }).mount('#app')
