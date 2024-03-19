@@ -188,7 +188,7 @@ createApp({
 
             textMessage: '',
             searchContact: '',
-            filterContactList:''
+            
 
         }
 
@@ -221,8 +221,8 @@ createApp({
     },
 
     computed :{
-        filteredContacts(){
-            return filterContactList =  this.contacts.filter(contact => contact.toLowerCase().includes(this.searchContact.toLowerCase()))
+        filteredContactList(){
+            return this.contacts.filter(contact => contact.toLowerCase().includes(this.searchContact.toLowerCase()))
             
         },
 

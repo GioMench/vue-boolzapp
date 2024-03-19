@@ -1,0 +1,19 @@
+<section class="contacts">
+
+    <div class="card" v-for="(contact, index) in contacts" @click="activeTheContact(index)">
+        <!--avatar-img-->
+        <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt="" />
+        <!--info-contacts-->
+        <div class="info-contact">
+            <h4>{{contact.name}}</h4>
+            <div class="text-light">{{contact.lastMessage}}</div>
+        </div>
+        <!--time-of-last-message-->
+        <div class="time">
+            16:15
+        </div>
+    </div>
+    <!--/card-->
+
+</section>
+<!--/section-contacts-->
