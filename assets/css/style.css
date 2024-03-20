@@ -199,6 +199,7 @@ a {
     flex-direction: column;
     gap:20px;
     padding: 40px;
+    
 }
 
 .sent {
@@ -252,6 +253,9 @@ ul {
 
 .hover .menu-dropdown {
     display: none;
+    position: absolute;
+    top: 0;
+    
 }
 
 .hover .hover-dropdown:hover .menu-dropdown {
@@ -260,10 +264,12 @@ ul {
     right: 0;
     padding: 0;
     
+    
 }
 
 .menu-dropdown{
-    box-shadow: 0.5px 0.5px 10px 0.5px var(--bz-icon-bottom); 
+    box-shadow: 0.5px 0.5px 10px 0.5px var(--bz-icon-bottom);
+    z-index: 1; 
 }
 
 /*REGION CHAT*/
