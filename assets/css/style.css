@@ -143,7 +143,7 @@ a {
 
 .card {
     background-color: var(--bz-chat-ligther);
-    
+
     border-bottom: 0.01em solid var(--bz-bar-top);
     display: flex;
     flex-direction: row;
@@ -188,18 +188,19 @@ a {
 }
 
 /*REGION CHAT-ON*/
-.the_chat{
+.the_chat {
     height: calc(95vh - 30vh);
     background-image: url(./img/mine.jpg);
     object-fit: cover;
     overflow-y: auto;
 }
+
 .chat {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
     padding: 40px;
-    
+
 }
 
 .sent {
@@ -255,21 +256,30 @@ ul {
     display: none;
     position: absolute;
     top: 0;
-    
+    right: 0;
 }
 
+.menu-dropdown-left{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -2;
+}
+ 
 .hover .hover-dropdown:hover .menu-dropdown {
     display: block;
-    position: absolute;
-    right: 0;
-    padding: 0;
-    
-    
+
 }
 
-.menu-dropdown{
+.hover .hover-dropdown:hover .menu-dropdown-left {
+    display: block;
+
+}
+
+
+.menu-dropdown .menu-dropdown-left {
     box-shadow: 0.5px 0.5px 10px 0.5px var(--bz-icon-bottom);
-    z-index: 1; 
+    z-index: 1;
 }
 
 /*REGION CHAT*/
@@ -340,7 +350,7 @@ ul {
         display: none;
     }
 
-    #chat_section{
+    #chat_section {
         width: 100%;
     }
 
