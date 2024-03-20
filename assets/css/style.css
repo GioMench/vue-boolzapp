@@ -277,10 +277,7 @@ ul {
 }
 
 
-.menu-dropdown .menu-dropdown-left {
-    box-shadow: 0.5px 0.5px 10px 0.5px var(--bz-icon-bottom);
-    z-index: 1;
-}
+
 
 /*REGION CHAT*/
 
