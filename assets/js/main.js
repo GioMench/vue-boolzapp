@@ -2,7 +2,8 @@ const { createApp } = Vue
 
 createApp({
     data() {
-        return {
+        return { 
+            searchContact: '',
             activeContact: 0,
             contacts: [
                 {
@@ -187,8 +188,7 @@ createApp({
             ],
 
             textMessage: '',
-            searchContact: '',
-            filteredContactList : ''
+           //filteredContactList: ''
 
         }
 
@@ -196,7 +196,7 @@ createApp({
 
     methods: {
 
-       
+
         activeTheContact(index) {
             this.activeContact = index
         },
@@ -216,17 +216,11 @@ createApp({
 
                 this.textMessage = ''
         }
-
-
     },
 
-    computed :{
-        filteredContactList(){
-            return this.contacts.filter(contact => contact.toLowerCase().includes(this.searchContact.toLowerCase()))
-
-        },
-
-        
-
+    computed: {
+        filteredContactList() {
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()))  
+        }
     }
 }).mount('#app')

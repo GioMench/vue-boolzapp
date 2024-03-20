@@ -59,11 +59,11 @@
 
                     </section>
                     <!--/section-search-->
+                    
 
-
-                    <section class="contacts" v-for="(contact, index) in filteredContactList"  @click="activeTheContact(index)">
-
-                        <div class="card">
+                    <section class="contacts">
+                        
+                        <div class="card" v-for="(contact, index) in filteredContactList"  @click="activeTheContact(index)">
                             <!--avatar-img-->
                             <img class="avatar" :src="'./assets/css/img/'+ contact.image" alt="" />
                             <!--info-contacts-->
@@ -76,6 +76,7 @@
                                 16:15
                             </div>
                         </div>
+                    
                         <!--/card-->
 
                     </section>
