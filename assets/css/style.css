@@ -138,11 +138,12 @@ a {
     display: flex;
     flex-direction: column;
     height: calc(95vh - 41vh);
+    background-color: var(--bz-chat-ligther);
 }
 
 .card {
     background-color: var(--bz-chat-ligther);
-    height: 20vh;
+    
     border-bottom: 0.01em solid var(--bz-bar-top);
     display: flex;
     flex-direction: row;
