@@ -125,7 +125,13 @@
                                                 <!--under-menu-->
                                                 <ul class="menu-dropdown">
                                                     <li class="icon-a"><a href="hover">Info messaggio</a></li>
-                                                    <li class="icon-a"><a href="hover">Cancella messaggio</a></li>
+                                                    <li
+                                                    :id="message.id"
+                                                    class="icon-a"
+                                                    @click="deleteMessage"
+                                                  >
+                                                    Cancella messaggio
+                                                  </li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -157,7 +163,13 @@
                                                 <!--under-menu-->
                                                 <ul class="menu-dropdown-left">
                                                     <li class="icon-a"><a href="hover">Info messaggio</a></li>
-                                                    <li class="icon-a"><a href="hover">Cancella messaggio</a></li>
+                                                    <li
+                                                    :id="message.id"
+                                                    class="icon-a"
+                                                    @click="deleteMessage"
+                                                  >
+                                                    Cancella messaggio
+                                                  </li>
                                                 </ul>
                                             </li>
                                         </ul>
